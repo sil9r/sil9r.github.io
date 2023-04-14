@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .my_button {
+        width: 180px;
+        height: 90px;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_quiz.css') }}">
+    <title>Викторина</title>
+</head>
+<body>
+<h2>Выберите викторину:</h2>
+    <form method="post" action="/">
+        <select name="quiz" size="1.2rem">
+            {% for id, name in q_list %}
+                <option value="{{id}}">{{name}}</option>
+            {% endfor %}    
+        </select>
+        <p><input type="submit" value="Выбрать" class="my_button"> </p>
+    </form>
+</body>
+</html>
