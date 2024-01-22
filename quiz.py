@@ -16,7 +16,7 @@ def end_quiz():
 def quiz_form():
     ''' функция получает список викторин из базы и формирует форму с выпадающим списком'''
     q_list = get_quises()
-    return render_template('start.html', q_list=q_list)
+    return render_template('index.html', q_list=q_list)
 
 def index():
     ''' Первая страница: если пришли запросом GET, то выбрать викторину, 
